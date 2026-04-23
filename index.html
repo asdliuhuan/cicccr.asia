@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebGL 2 示例</title>
+</head>
+<body>
+  <canvas id="canvas" width="400" height="300"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const gl = canvas.getContext('webgl2'); // 获取 WebGL 2 上下文
+    if (!gl) {
+      alert('你的浏览器不支持 WebGL 2，请升级浏览器或检查设置');
+    } else {
+      // 清空画布为红色
+      gl.clearColor(1, 0, 0, 1);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+    }
+  </script>
+</body>
+</html>
